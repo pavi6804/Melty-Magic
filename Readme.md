@@ -47,18 +47,37 @@ Simple website that allows the customer to **book tables and online ordering** w
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: 
-  - React.js
-  - React-Bootstrap
+1. **Frontend**: 
+    - React.js
+    - React-Bootstrap
   
-- **Backend**: 
-  - Node.js
-  - Express.js
-  - MongoDB
+1. **Backend**: 
+    - Node.js
+    - Express.js
+    - MongoDB
   
-- **Additional**: 
-  - JWT Authentication
-  - Nodemailer (for email notifications)
+1. **Additional**: 
+    - JWT Authentication
+    - Nodemailer (for email notifications)
 
+## 🚀 Setup
 
+1. **Clone repo & install dependencies:**
+   
+```bash
+   git clone https://github.com/pavi6804/Melty-Magic.git
+   cd ice-cream-parlor
+   npm install
+   cd client && npm install
+```
 
+1. **Run the application:**
+   
+```bash
+   npm run dev
+```
+
+## 📌 Future Enhancements
+
+- Online Payment Integration.
+- Order Tracking System.
