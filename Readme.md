@@ -64,18 +64,18 @@ Simple website that allows the customer to **book tables and online ordering** w
 
 1. **Clone repo & install dependencies:**
    
-```bash
-   git clone https://github.com/pavi6804/Melty-Magic.git
-   cd ice-cream-parlor
-   npm install
-   cd client && npm install
-```
+    ```bash
+       git clone https://github.com/pavi6804/Melty-Magic.git
+       cd ice-cream-parlor
+       npm install
+       cd client && npm install
+    ```
 
 1. **Run the application:**
    
-```bash
-   npm run dev
-```
+    ```bash
+       npm run dev
+    ```
 
 ## 📌 Future Enhancements
 
