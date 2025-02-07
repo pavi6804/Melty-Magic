@@ -49,7 +49,7 @@ Simple website that allows the customer to **book tables and online ordering** w
 
 1. **Frontend**: 
     - React.js
-    - React-Bootstrap
+    - React-Bootstra
   
 1. **Backend**: 
     - Node.js
@@ -59,6 +59,21 @@ Simple website that allows the customer to **book tables and online ordering** w
 1. **Additional**: 
     - JWT Authentication
     - Nodemailer (for email notifications)
+
+## Website Layout 
+
+### Home page
+![home page](./src/3-home-page.png)
+
+---
+
+### Menu page
+![menu page](./src/1-Menupage.png)
+
+---
+
+### Sign-up/Login  page
+![login page](./src/2-Login-signup.png)
 
 ## 🚀 Setup
 
