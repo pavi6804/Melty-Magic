@@ -93,3 +93,22 @@
 **Purpose:**
 - Improves user experience by allowing easy reordering.
 - Provides customers with a record of their past transactions.
+
+
+---
+
+
+## Website Layout 
+
+### Home page
+![home page](../src/3-home-page.png)
+
+---
+
+### Menu page
+![menu page](../src/1-Menupage.png)
+
+---
+
+### Sign-up/Login  page
+![login page](../src/2-Login-signup.png)
