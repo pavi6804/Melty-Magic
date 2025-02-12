@@ -1,0 +1,100 @@
+/* Menu Page Background */
+.menu-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url("/bg-image.avif") no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+    overflow-x: hidden;
+  }
+    
+  .menu-carousel {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .offer {
+    color: black;
+  }
+
+  .carousel img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .menu-title {
+    margin: 30px 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .ice-cream-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .ice-cream-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    min-height: 350px;
+  }
+  
+  .ice-cream-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .ice-cream-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  button {
+    background-color: #ff6b81;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ff4757;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .menu-carousel {
+      max-width: 100%;
+    }
+  
+    .carousel img {
+      height: 250px;
+    }
+  
+    .ice-cream-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+  

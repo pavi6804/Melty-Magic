@@ -1,14 +1,21 @@
-import React from "react";
-import TableBooking from "./Pages/TableBooking";
-import "bootstrap/dist/css/bootstrap.min.css"; 
+import React, { useState} from "react";
+import Menu from "./Pages/Menu";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { ToastContainer } from "react-toastify"; 
 
-function App() {
+  const App = () => {
+    const [cart, setCart] = useState([]);
+
+  const addToCart = (item) => {
+    setCart([...cart, item]); 
+  };
+
   return (
     <>
-      <h1 className="text-center mt-3">Welcome to Melty Magic</h1>
-      <TableBooking /> 
+      <Menu addToCart={addToCart} />
+      <ToastContainer />
     </>
   );
 }
 
-export default App
+export default App;
