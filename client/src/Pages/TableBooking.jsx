@@ -47,11 +47,12 @@ const TableBooking = () => {
                 placeholder="Enter your name"
                 name="name"
                 value={formData.name}
+                className="input-field"
                 onChange={handleChange}
               />
             </Form.Group>
           </Col>
-          </Row>
+          </Row><br/>
           <Row>
           <Col md={12}>
             <Form.Group className="mb-3">
@@ -61,11 +62,12 @@ const TableBooking = () => {
                 placeholder="Enter your email"
                 name="email"
                 value={formData.email}
+                className="input-field"
                 onChange={handleChange}
               />
             </Form.Group>
           </Col>
-        </Row>
+        </Row><br/>
         <Row>
           <Col md={12}>
             <Form.Group className="mb-3">
@@ -75,11 +77,12 @@ const TableBooking = () => {
                 placeholder="Enter your phone number"
                 name="phone"
                 value={formData.phone}
+                className="input-field"
                 onChange={handleChange}
               />
             </Form.Group>
           </Col>
-        </Row>
+        </Row><br/>
         <Row>
           <Col md={12}>
             <Form.Group className="mb-3">
@@ -88,38 +91,52 @@ const TableBooking = () => {
                 type="date"
                 name="date"
                 value={formData.date}
+                className="input-field"
                 onChange={handleChange}
               />
             </Form.Group>
           </Col>
-        </Row>
+        </Row><br/>
         <Row>
           <Col md={12}>
-            <Form.Group className="mb-3">
-              <Form.Label>Time</Form.Label>
-              <Form.Control
-                type="time"
-                name="time"
-                value={formData.time}
-                onChange={handleChange}
-              />
-            </Form.Group>
+          <Form.Group className="mb-3">
+  <Form.Label>Time</Form.Label>
+  <Form.Select
+    name="time"
+    value={formData.time}
+    className="input-field"
+    onChange={handleChange}
+  >
+    <option value="">Select a Time</option>
+    {Array.from({ length: 12 }, (_, i) => {
+      const hour = i + 9; // Time range from 9 AM to 8 PM
+      const formattedHour = hour < 12 ? `${hour}:00 AM` : hour === 12 ? "12:00 PM" : `${hour - 12}:00 PM`;
+      return (
+        <option key={hour} value={`${hour}:00`}>
+          {formattedHour}
+        </option>
+      );
+    })}
+  </Form.Select>
+</Form.Group>
+
           </Col>
-        </Row>
+        </Row><br/>
         <Row>
           <Col md={12}>
             <Form.Group className="mb-3">
-              <Form.Label>Number of Guests</Form.Label>
+              <Form.Label >Number of Guests</Form.Label>
               <Form.Control
                 type="number"
                 name="guests"
                 min="1"
                 value={formData.guests}
+                className="input-field"
                 onChange={handleChange}
               />
             </Form.Group>
           </Col>
-        </Row>
+        </Row><br/>
         <Button variant="primary" type="submit" className="submit-button"   >
           Book Table
         </Button>

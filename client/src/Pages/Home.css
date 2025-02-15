@@ -1,0 +1,32 @@
+/* Home Page Styling */
+.home-container {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .home-container h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .home-container p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+  }
+  
+  .menu-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff4757, #ff6b6b);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.7);
+  }
