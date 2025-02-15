@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body {
+  background: linear-gradient(#00446A 50%, #1c88c7);
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.carousel-container {
+  max-width: 100%;
+  padding: 0 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 400px; /* Adjusted for better visibility */
+  transform: perspective(100px);
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.product-card {
+  width: 270px;
+  height: 270px;
+  position: absolute;
+  transition: transform 1s ease-in-out;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Animation for 5 items */
+.product-card:nth-child(1) {
+  transform: translate3d(-180%, 0, -25px);
+  animation: rotate-leftmost 16s infinite ease-in-out;
+}
+
+.product-card:nth-child(2) {
+  transform: translate3d(-90%, 0, -15px);
+  animation: rotate-left 16s infinite ease-in-out;
+}
+
+.product-card:nth-child(3) {
+  transform: translate3d(0, 0, 10px);
+  animation: rotate-center 16s infinite ease-in-out;
+}
+
+.product-card:nth-child(4) {
+  transform: translate3d(90%, 0, -15px);
+  animation: rotate-right 16s infinite ease-in-out;
+}
+
+.product-card:nth-child(5) {
+  transform: translate3d(180%, 0, -25px);
+  animation: rotate-rightmost 16s infinite ease-in-out;
+}
+
+/* Keyframes for smooth rotation */
+@keyframes rotate-leftmost {
+  0%, 100% { transform: translate3d(-180%, 0, -25px); }
+  25% { transform: translate3d(-90%, 0, -15px); }
+  50% { transform: translate3d(0, 0, 10px); }
+  75% { transform: translate3d(90%, 0, -15px); }
+}
+
+@keyframes rotate-left {
+  0%, 100% { transform: translate3d(-90%, 0, -15px); }
+  25% { transform: translate3d(0, 0, 10px); }
+  50% { transform: translate3d(90%, 0, -15px); }
+  75% { transform: translate3d(180%, 0, -25px); }
+}
+
+@keyframes rotate-center {
+  0%, 100% { transform: translate3d(0, 0, 10px); }
+  25% { transform: translate3d(90%, 0, -15px); }
+  50% { transform: translate3d(180%, 0, -25px); }
+  75% { transform: translate3d(-180%, 0, -25px); }
+}
+
+@keyframes rotate-right {
+  0%, 100% { transform: translate3d(90%, 0, -15px); }
+  25% { transform: translate3d(180%, 0, -25px); }
+  50% { transform: translate3d(-180%, 0, -25px); }
+  75% { transform: translate3d(-90%, 0, -15px); }
+}
+
+@keyframes rotate-rightmost {
+  0%, 100% { transform: translate3d(180%, 0, -25px); }
+  25% { transform: translate3d(-180%, 0, -25px); }
+  50% { transform: translate3d(-90%, 0, -15px); }
+  75% { transform: translate3d(0, 0, 10px); }
+}

@@ -1,0 +1,132 @@
+/* Order Page Container with Glassmorphism Effect */
+.order-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Order Summary & Customer Details with Glassmorphism */
+.order-summary, .customer-details {
+  width: 45%;
+  height: 90vh;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.order-summary:hover, .customer-details:hover {
+  transform: scale(1.02);
+}
+
+.order-summary {
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+  margin-top: 40px;
+}
+
+.customer-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Order Table with Hover & Animation */
+.order-summary table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.order-summary th, .order-summary td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.order-summary thead {
+  color: white;
+}
+
+.order-summary tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.order-summary tbody tr:hover {
+  transition: background 0.3s ease-in-out;
+}
+
+/* Input Fields with Smooth Focus Effect */
+.input-field {
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  font-size: 16px;
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-field:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 8px rgba(30, 136, 229, 0.5);
+}
+
+/* Quantity Buttons with Bounce Effect */
+.qty-btn-g, .qty-btn-r {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.qty-btn-g {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.qty-btn-r {
+  background-color: #388e3c;
+  color: white;
+}
+
+.qty-btn-g:active, .qty-btn-r:active {
+  transform: scale(1.1);
+}
+
+/* Button with Hover Animation */
+.place-order-btn {
+  width: 75%;
+  margin-top: 15px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.place-order-btn:hover {
+  background: linear-gradient(135deg, #42a5f5, #1e88e5);
+  transform: translateY(-3px);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
